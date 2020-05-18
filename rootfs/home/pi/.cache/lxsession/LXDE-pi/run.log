@@ -1,0 +1,171 @@
+** Message: 10:11:31.134: environement.vala:58: Exporting primary_variable
+** Message: 10:11:31.134: environement.vala:59: desktop_environnement XDG_CURRENT_DESKTOP
+** Message: 10:11:31.134: environement.vala:150: confir_dirs is null, export : /etc/xdg
+** Message: 10:11:31.135: environement.vala:184: Exporting XDG_CONFIG_DIRS
+** Message: 10:11:31.135: environement.vala:218: custom_data :
+** Message: 10:11:31.135: environement.vala:219: data_dirs :/usr/local/share:/usr/share/raspi-ui-overrides:/usr/share:/usr/share/gdm:/var/lib/menu-xdg
+** Message: 10:11:31.135: environement.vala:220: data_dirs not null, export : /usr/local/share:/usr/share/raspi-ui-overrides:/usr/share:/usr/share/gdm:/var/lib/menu-xdg
+** Message: 10:11:31.135: environement.vala:225: Exporting XDG_DATA_DIRS
+** Message: 10:11:31.135: utils.vala:138: Config system location : /etc/xdg/lxsession/LXDE-pi
+** Message: 10:11:31.141: utils.vala:144: System system path location : /etc/xdg/lxsession/LXDE-pi/desktop.conf
+** Message: 10:11:31.141: utils.vala:148: Final file used : /etc/xdg/lxsession/LXDE-pi/desktop.conf
+** Message: 10:11:31.141: utils.vala:39: Config system location : /etc/xdg/lxsession/LXDE-pi
+** Message: 10:11:31.141: utils.vala:45: System system path location : /etc/xdg/lxsession/LXDE-pi/desktop.conf
+
+** (lxsession:498): WARNING **: 10:11:31.143: utils.vala:70: Datei oder Verzeichnis nicht gefunden
+** Message: 10:11:31.143: settings.vala:540: Die Schlüsselwertedatei hat keinen Schlüssel »iGtk/ColorScheme« in der Gruppe »GTK«
+** Message: 10:11:31.143: settings.vala:540: Die Schlüsselwertedatei hat keinen Schlüssel »windows_manager/command« in der Gruppe »Session«
+** Message: 10:11:31.143: settings.vala:540: Die Schlüsselwertedatei hat keinen Schlüssel »panel/command« in der Gruppe »Session«
+** Message: 10:11:31.143: settings.vala:540: Die Schlüsselwertedatei hat keinen Schlüssel »dock/command« in der Gruppe »Session«
+** Message: 10:11:31.143: settings.vala:540: Die Schlüsselwertedatei hat keinen Schlüssel »file_manager/command« in der Gruppe »Session«
+** Message: 10:11:31.143: settings.vala:540: Die Schlüsselwertedatei hat keinen Schlüssel »desktop_manager/command« in der Gruppe »Session«
+** Message: 10:11:31.144: settings.vala:540: Die Schlüsselwertedatei hat keinen Schlüssel »launcher_manager/autostart« in der Gruppe »Session«
+** Message: 10:11:31.144: settings.vala:540: Die Schlüsselwertedatei hat keinen Schlüssel »composite_manager/command« in der Gruppe »Session«
+** Message: 10:11:31.144: settings.vala:540: Die Schlüsselwertedatei hat keinen Schlüssel »im1/command« in der Gruppe »Session«
+** Message: 10:11:31.144: settings.vala:540: Die Schlüsselwertedatei hat keinen Schlüssel »im2/command« in der Gruppe »Session«
+** Message: 10:11:31.144: settings.vala:540: Die Schlüsselwertedatei hat keinen Schlüssel »widget1/command« in der Gruppe »Session«
+** Message: 10:11:31.144: settings.vala:540: Die Schlüsselwertedatei hat keinen Schlüssel »notification/command« in der Gruppe »Session«
+** Message: 10:11:31.144: settings.vala:540: Die Schlüsselwertedatei hat keinen Schlüssel »keybindings/command« in der Gruppe »Session«
+** Message: 10:11:31.144: settings.vala:540: Die Schlüsselwertedatei hat keinen Schlüssel »im_manager/command« in der Gruppe »Session«
+** Message: 10:11:31.144: settings.vala:540: Die Schlüsselwertedatei hat keinen Schlüssel »screensaver/command« in der Gruppe »Session«
+** Message: 10:11:31.144: settings.vala:540: Die Schlüsselwertedatei hat keinen Schlüssel »power_manager/command« in der Gruppe »Session«
+** Message: 10:11:31.144: settings.vala:540: Die Schlüsselwertedatei hat keinen Schlüssel »audio_manager/command« in der Gruppe »Session«
+** Message: 10:11:31.144: settings.vala:540: Die Schlüsselwertedatei hat keinen Schlüssel »workspace_manager/command« in der Gruppe »Session«
+** Message: 10:11:31.144: settings.vala:540: Die Schlüsselwertedatei hat keinen Schlüssel »screenshot_manager/command« in der Gruppe »Session«
+** Message: 10:11:31.144: settings.vala:540: Die Schlüsselwertedatei hat keinen Schlüssel »message_manager/command« in der Gruppe »Session«
+** Message: 10:11:31.144: settings.vala:540: Die Schlüsselwertedatei hat keinen Schlüssel »upgrade_manager/command« in der Gruppe »Session«
+** Message: 10:11:31.144: settings.vala:540: Die Schlüsselwertedatei hat keinen Schlüssel »updates_manager/command« in der Gruppe »Session«
+** Message: 10:11:31.145: settings.vala:540: Die Schlüsselwertedatei hat keinen Schlüssel »updates_manager/timeout« in der Gruppe »Session«
+** Message: 10:11:31.145: settings.vala:540: Die Schlüsselwertedatei hat keinen Schlüssel »crash_manager/command« in der Gruppe »Session«
+** Message: 10:11:31.145: settings.vala:540: Die Schlüsselwertedatei hat keinen Schlüssel »crash_manager/dev_mode« in der Gruppe »Session«
+** Message: 10:11:31.145: settings.vala:540: Die Schlüsselwertedatei hat keinen Schlüssel »crash_manager/timeout« in der Gruppe »Session«
+** Message: 10:11:31.145: settings.vala:540: Die Schlüsselwertedatei hat keinen Schlüssel »upstart_user_session« in der Gruppe »Session«
+** Message: 10:11:31.145: settings.vala:540: Die Schlüsselwertedatei hat keinen Schlüssel »proxy_manager/http« in der Gruppe »Session«
+** Message: 10:11:31.145: settings.vala:540: Die Schlüsselwertedatei hat keinen Schlüssel »a11y/command« in der Gruppe »Session«
+** Message: 10:11:31.145: settings.vala:540: Die Schlüsselwertedatei hat keinen Schlüssel »xrandr/command« in der Gruppe »Session«
+** Message: 10:11:31.145: settings.vala:540: Die Schlüsselwertedatei hat keinen Schlüssel »network_gui/command« in der Gruppe »Session«
+** Message: 10:11:31.145: settings.vala:540: Die Schlüsselwertedatei hat keinen Schlüssel »webbrowser/command« in der Gruppe »Session«
+** Message: 10:11:31.145: settings.vala:540: Die Schlüsselwertedatei hat keinen Schlüssel »email/command« in der Gruppe »Session«
+** Message: 10:11:31.145: settings.vala:540: Die Schlüsselwertedatei hat keinen Schlüssel »pdf_reader/command« in der Gruppe »Session«
+** Message: 10:11:31.146: settings.vala:540: Die Schlüsselwertedatei hat keinen Schlüssel »video_player/command« in der Gruppe »Session«
+** Message: 10:11:31.146: settings.vala:540: Die Schlüsselwertedatei hat keinen Schlüssel »audio_player/command« in der Gruppe »Session«
+** Message: 10:11:31.146: settings.vala:540: Die Schlüsselwertedatei hat keinen Schlüssel »images_display/command« in der Gruppe »Session«
+** Message: 10:11:31.146: settings.vala:540: Die Schlüsselwertedatei hat keinen Schlüssel »text_editor/command« in der Gruppe »Session«
+** Message: 10:11:31.146: settings.vala:540: Die Schlüsselwertedatei hat keinen Schlüssel »archive/command« in der Gruppe »Session«
+** Message: 10:11:31.146: settings.vala:540: Die Schlüsselwertedatei hat keinen Schlüssel »charmap/command« in der Gruppe »Session«
+** Message: 10:11:31.146: settings.vala:540: Die Schlüsselwertedatei hat keinen Schlüssel »calculator/command« in der Gruppe »Session«
+** Message: 10:11:31.146: settings.vala:540: Die Schlüsselwertedatei hat keinen Schlüssel »spreadsheet/command« in der Gruppe »Session«
+** Message: 10:11:31.146: settings.vala:540: Die Schlüsselwertedatei hat keinen Schlüssel »bittorent/command« in der Gruppe »Session«
+** Message: 10:11:31.146: settings.vala:540: Die Schlüsselwertedatei hat keinen Schlüssel »document/command« in der Gruppe »Session«
+** Message: 10:11:31.146: settings.vala:540: Die Schlüsselwertedatei hat keinen Schlüssel »webcam/command« in der Gruppe »Session«
+** Message: 10:11:31.146: settings.vala:540: Die Schlüsselwertedatei hat keinen Schlüssel »burn/command« in der Gruppe »Session«
+** Message: 10:11:31.146: settings.vala:540: Die Schlüsselwertedatei hat keinen Schlüssel »notes/command« in der Gruppe »Session«
+** Message: 10:11:31.146: settings.vala:540: Die Schlüsselwertedatei hat keinen Schlüssel »disk_utility/command« in der Gruppe »Session«
+** Message: 10:11:31.146: settings.vala:540: Die Schlüsselwertedatei hat keinen Schlüssel »tasks/command« in der Gruppe »Session«
+** Message: 10:11:31.146: settings.vala:540: Die Schlüsselwertedatei enthält nicht die Gruppe »Keymap«
+** Message: 10:11:31.147: settings.vala:540: Die Schlüsselwertedatei hat keinen Schlüssel »laptop_mode« in der Gruppe »State«
+** Message: 10:11:31.147: settings.vala:540: Die Schlüsselwertedatei hat keinen Schlüssel »gnome« in der Gruppe »Dbus«
+** Message: 10:11:31.147: settings.vala:540: Die Schlüsselwertedatei hat keinen Schlüssel »type« in der Gruppe »Environment«
+** Message: 10:11:31.147: settings.vala:540: Die Schlüsselwertedatei hat keinen Schlüssel »ubuntu_menuproxy« in der Gruppe »Environment«
+** Message: 10:11:31.147: settings.vala:540: Die Schlüsselwertedatei hat keinen Schlüssel »toolkit_integration« in der Gruppe »Environment«
+** Message: 10:11:31.147: settings.vala:540: Die Schlüsselwertedatei hat keinen Schlüssel »gtk/overlay_scrollbar_disable« in der Gruppe »Environment«
+** Message: 10:11:31.147: settings.vala:540: Die Schlüsselwertedatei hat keinen Schlüssel »qt/force_theme« in der Gruppe »Environment«
+** Message: 10:11:31.147: settings.vala:540: Die Schlüsselwertedatei hat keinen Schlüssel »qt/platform« in der Gruppe »Environment«
+** Message: 10:11:31.148: settings.vala:462: Monitoring: /etc/xdg/lxsession/LXDE-pi/desktop.conf
+** Message: 10:11:31.148: settings.vala:470: Desktop file is not in config home, monitoring creation of it
+** Message: 10:11:31.148: settings.vala:485: Monitoring home path: /home/pi/.config/lxsession/LXDE-pi/desktop.conf
+** Message: 10:11:31.148: environement.vala:79: Exporting variable
+** Message: 10:11:31.148: environement.vala:80: desktop_environnement XDG_CURRENT_DESKTOP
+** Message: 10:11:31.148: environement.vala:177: custom_config :
+** Message: 10:11:31.148: environement.vala:178: config_dirs :/etc/xdg
+** Message: 10:11:31.148: environement.vala:179: confir_dirs not null, export : /etc/xdg
+** Message: 10:11:31.149: environement.vala:184: Exporting XDG_CONFIG_DIRS
+** Message: 10:11:31.149: environement.vala:218: custom_data :
+** Message: 10:11:31.149: environement.vala:219: data_dirs :/usr/local/share:/usr/share/raspi-ui-overrides:/usr/share:/usr/share/gdm:/var/lib/menu-xdg
+** Message: 10:11:31.149: environement.vala:220: data_dirs not null, export : /usr/local/share:/usr/share/raspi-ui-overrides:/usr/share:/usr/share/gdm:/var/lib/menu-xdg
+** Message: 10:11:31.149: environement.vala:225: Exporting XDG_DATA_DIRS
+** Message: 10:11:31.149: utils.vala:39: Config system location : /etc/xdg/lxsession/LXDE-pi
+** Message: 10:11:31.149: utils.vala:45: System system path location : /etc/xdg/lxsession/LXDE-pi/desktop.conf
+
+** (lxsession:498): WARNING **: 10:11:31.149: utils.vala:70: Datei oder Verzeichnis nicht gefunden
+** Message: 10:11:31.149: environement.vala:254: No entry in [Environment_variable]. Die Schlüsselwertedatei enthält nicht die Gruppe »Environment_variable«
+** Message: 10:11:31.153: utils.vala:138: Config system location : /etc/xdg/lxsession/LXDE-pi
+** Message: 10:11:31.153: utils.vala:144: System system path location : /etc/xdg/lxsession/LXDE-pi/conffiles.conf
+** Message: 10:11:31.153: utils.vala:148: Final file used : /etc/xdg/lxsession/LXDE-pi/conffiles.conf
+** Message: 10:11:31.153: options.vala:164: Activate xsettings_manager build-in
+** Message: 10:11:31.153: utils.vala:39: Config system location : /etc/xdg/lxsession/LXDE-pi
+** Message: 10:11:31.153: utils.vala:45: System system path location : /etc/xdg/lxsession/LXDE-pi/desktop.conf
+
+** (lxsession:498): WARNING **: 10:11:31.154: utils.vala:70: Datei oder Verzeichnis nicht gefunden
+xprop:  no such property "_NET_NUMBER_OF_DESKTOPS"
+xprop:  no such property "_NET_DESKTOP_NAMES"
+** Message: 10:11:31.174: app.vala:721: polkit separate
+** Message: 10:11:31.174: app.vala:721: polkit separate
+** Message: 10:11:31.179: app.vala:76: Launching lxpolkit 
+** Message: 10:11:31.180: utils.vala:138: Config system location : /etc/xdg/lxsession/LXDE-pi
+** Message: 10:11:31.180: utils.vala:144: System system path location : /etc/xdg/lxsession/LXDE-pi/autostart
+** Message: 10:11:31.180: utils.vala:148: Final file used : /etc/xdg/lxsession/LXDE-pi/autostart
+** Message: 10:11:31.180: autostart.vala:42: Autostart path : /etc/xdg/lxsession/LXDE-pi/autostart
+** Message: 10:11:31.195: app.vala:76: Launching lxpanel 
+** Message: 10:11:31.216: app.vala:76: Launching pcmanfm 
+
+** (lxsession:498): WARNING **: 10:11:31.237: app.vala:86: Kindprozess »xscreensaver« konnte nicht ausgeführt werden (Datei oder Verzeichnis nicht gefunden)
+
+** (lxsession:498): WARNING **: 10:11:31.238: app.vala:87: Error when launching xscreensaver
+** Message: 10:11:31.246: options.vala:107: Create build-in Clipboard
+** Message: 10:11:31.247: main.vala:441: Check keymap_mode (null)
+** Message: 10:11:31.252: app.vala:76: Launching /usr/bin/ssh-agent 
+SSH_AUTH_SOCK=/tmp/ssh-kEDIEQRU8dfX/agent.569; export SSH_AUTH_SOCK;
+SSH_AGENT_PID=571; export SSH_AGENT_PID;
+echo Agent pid 571;
+** Message: 10:11:31.551: x-terminal-emulator has very limited support, consider choose another terminal
+** Message: 10:11:31.561: app.vala:130: /usr/bin/ssh-agent exit with this type of exit: 0
+** Message: 10:11:31.616: x-terminal-emulator has very limited support, consider choose another terminal
+grep: /home/pi/.config/lxpanel/LXDE-pi/panels/*: Datei oder Verzeichnis nicht gefunden
+Openbox-Message: Keine gültige Menü-Datei "/usr/share/lxde/openbox/menu.xml" vorhanden
+** Message: 10:11:33.845: Connecting ...
+** Message: 10:11:33.845: Status changed to down
+xrandr: Failed to get size of gamma for output default
+Unit pt-device-manager.service could not be found.
+
+** (lxpanel:564): WARNING **: 10:11:34.093: Battery 0 not found
+** Message: 10:11:34.847: Status changed to opened
+** Message: 10:11:34.847: Connected to dhcpcd-8.1.2
+** Message: 10:11:34.849: Status changed to connecting
+** Message: 10:11:34.849: eth0: Link is down
+** Message: 10:11:34.849: wlan0: Associated with Funkfritz
+** Message: 10:11:34.852: wlan0: WPA status connected
+** Message: 10:11:34.852: wlan0: Received scan results
+** Message: 10:11:39.016: wlan0: Configured 192.168.178.27/24
+** Message: 10:11:39.016: Status changed to connected
+** Message: 10:12:43.554: wlan0: Received scan results
+** Message: 10:12:43.760: wlan0: Disassociated from Funkfritz
+** Message: 10:12:43.775: Status changed to disconnected
+** Message: 10:12:51.302: wlan0: Received scan results
+** Message: 10:12:54.112: wlan0: Associated with Funkfritz
+** Message: 10:12:54.132: Status changed to connecting
+** Message: 10:13:00.827: wlan0: Configured 192.168.178.27/24
+** Message: 10:13:00.827: Status changed to connected
+** Message: 10:13:46.567: wlan0: Received scan results
+** Message: 10:13:47.359: wlan0: Received scan results
+** Message: 10:13:47.529: wlan0: Disassociated from Funkfritz
+** Message: 10:13:47.548: Status changed to disconnected
+** Message: 10:13:50.571: wlan0: Associated with Funkfritz
+** Message: 10:13:51.277: Status changed to connecting
+** Message: 10:13:56.677: wlan0: Configured 192.168.178.27/24
+** Message: 10:13:56.678: Status changed to connected
+** Message: 10:14:47.089: wlan0: Received scan results
+** Message: 10:15:46.992: wlan0: Received scan results
+** Message: 10:16:46.999: wlan0: Received scan results
+** Message: 10:17:47.005: wlan0: Received scan results
+** Message: 10:18:47.115: wlan0: Received scan results
+** Message: 10:19:47.019: wlan0: Received scan results
+** Message: 10:20:47.027: wlan0: Received scan results
+** Message: 10:21:47.034: wlan0: Received scan results
+** Message: 10:22:47.041: wlan0: Received scan results
+** Message: 10:23:47.049: wlan0: Received scan results
+** Message: 10:24:47.053: wlan0: Received scan results
+** Message: 10:25:47.060: wlan0: Received scan results
+** Message: 10:26:47.067: wlan0: Received scan results
+** Message: 10:27:47.074: wlan0: Received scan results
+** Message: 10:28:47.084: wlan0: Received scan results
