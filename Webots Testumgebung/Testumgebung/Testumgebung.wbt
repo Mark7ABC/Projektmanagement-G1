@@ -1,0 +1,34 @@
+#VRML_SIM R2020a utf8
+WorldInfo {
+}
+Viewpoint {
+  orientation 1 0 0 4.71238898038469
+  position 0.0006007907278775184 1.9454537726056718 1.2984511647990638e-05
+}
+Background {
+  skyColor [
+    0.15 0.45 1
+  ]
+}
+RectangleArena {
+  floorTileSize 0 0
+}
+E-puck {
+  hidden position_0_0 183.1491456253027
+  hidden position_0_1 216.9563246731536
+  hidden rotation_1 1 0 0 5.346413590084886
+  hidden rotation_2 -1 0 0 3.3280242290476623
+  translation -0.3 0 0.3
+  name "Robot1"
+  controller "Robot1"
+}
+E-puck {
+  hidden position_0_0 172.23765602715724
+  hidden position_0_1 212.143739190099
+  hidden rotation_1 1 0 0 3.6915325738711786
+  hidden rotation_2 1 0 0 1.4845612540069282
+  translation 0.3 0 -0.3
+  rotation 0 1 0 3.141592653589793
+  name "Robot2"
+  controller "Robot2"
+}
