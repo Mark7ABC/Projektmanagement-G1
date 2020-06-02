@@ -3,8 +3,35 @@ WorldInfo {
 }
 Robot {
   translation 0.2 0.06 0.2
-  rotation 0.00036331034961334445 0.9999995614464774 0.0008631989589741182 -2.3240471614611904
+  rotation 0.0008188775073231738 0.9999994005189289 0.0007269122443600366 -2.4709203061004255
   children [
+    DistanceSensor {
+      translation 0 -0.03 0.05
+      rotation 0 1 0 -1.5708003061004252
+    }
+    DEF tLED Transform {
+      translation 0 -0.03 0.05
+      children [
+        LED {
+          scale 0.1 0.1 0.1
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.8 0.8 0.8
+                roughness 0.2
+                metalness 0.5
+                emissiveIntensity 100
+              }
+              geometry Box {
+                size 0.1 0.1 0.1
+              }
+            }
+          ]
+          name "stateled"
+          gradual TRUE
+        }
+      ]
+    }
     DEF CAM HingeJoint {
       endPoint Solid {
         rotation 0 1 0 3.141592653589793
@@ -107,7 +134,7 @@ Robot {
     }
     HingeJoint {
       jointParameters HingeJointParameters {
-        position 2.411195383723881
+        position 13.805521809375815
         anchor -0.05 -0.04 0
       }
       device [
@@ -116,8 +143,8 @@ Robot {
         }
       ]
       endPoint Solid {
-        translation -0.05999871748116081 -0.04000489498144871 1.205709154068918e-05
-        rotation 0.9999999999999977 2.2467935343468908e-08 -6.47294716581437e-08 2.4111952272869566
+        translation -0.05999871748116081 -0.03999078940089961 9.192342683761226e-06
+        rotation 0.9999999999999939 -2.747295907427646e-08 -1.0673372612052652e-07 1.2391510385797218
         children [
           DEF WHEEL Transform {
             rotation 0 0 1 1.5707996938995747
@@ -142,7 +169,7 @@ Robot {
     }
     HingeJoint {
       jointParameters HingeJointParameters {
-        position 2.186986912110353
+        position 8.205590030515769
         anchor 0.05 -0.04 0
       }
       device [
@@ -152,8 +179,8 @@ Robot {
         }
       ]
       endPoint Solid {
-        translation 0.06000128159021598 -0.040002683391633605 1.1143981457536344e-05
-        rotation 0.9999999999999961 -7.787788308787006e-08 4.0440553447249064e-08 2.186986758291521
+        translation 0.06000128159021598 -0.03999967579633158 1.1457914529555335e-05
+        rotation -0.9999999999999958 7.491560280225098e-08 -5.2498851638232015e-08 4.360780731855645
         children [
           DEF WHEEL Transform {
             rotation 0 0 1 1.5707996938995747
@@ -186,13 +213,16 @@ Robot {
   controller "raspi"
 }
 Robot {
-  translation -0.2 0.06 -0.2
-  rotation -0.0016325959650545449 0.9999984152482045 0.0007100221790025864 0.8014664204637744
+  translation -0.19999995081467623 0.059567161045032485 0.20000004797166018
+  rotation -0.001631152029687597 0.999998418034629 0.0007094161653735829 0.8014664186598651
   children [
     DEF CAM HingeJoint {
       endPoint Solid {
         rotation 0 1 0 3.141592653589793
         children [
+          DEF LED LED {
+            name "LED"
+          }
           Transform {
             translation 0 0.01 0
             rotation 1 0 0 -1.5707996938995747
@@ -291,7 +321,7 @@ Robot {
     }
     HingeJoint {
       jointParameters HingeJointParameters {
-        position 0.2411203565411699
+        position 0.2411202770769236
         anchor -0.05 -0.04 0
       }
       device [
@@ -300,8 +330,8 @@ Robot {
         }
       ]
       endPoint Solid {
-        translation -0.05999871748116081 -0.039987282945298096 -2.758771377371709e-06
-        rotation 0.9999999999998584 -3.630937795712627e-07 -3.8901746476882167e-07 0.241120200104278
+        translation -0.05999871748116081 -0.039987282945517316 -2.7587723879391275e-06
+        rotation 0.9999999999998584 -3.630939169653707e-07 -3.8901758098588217e-07 0.24112012064003313
         children [
           DEF WHEEL Transform {
             rotation 0 0 1 1.5707996938995747
@@ -327,7 +357,7 @@ Robot {
     }
     HingeJoint {
       jointParameters HingeJointParameters {
-        position 0.1290153431213211
+        position 0.12901526369244617
         anchor 0.05 -0.04 0
       }
       device [
@@ -337,8 +367,8 @@ Robot {
         }
       ]
       endPoint Solid {
-        translation 0.06000128159021598 -0.03998889634285878 -2.8456478129683024e-06
-        rotation 0.9999999999992555 -7.665268879987207e-08 1.217873018484846e-06 0.129015187884867
+        translation 0.06000128159021598 -0.03998889634308481 -2.845648694922098e-06
+        rotation 0.999999999999296 -7.453284575873237e-08 1.18419328486156e-06 0.12901511274907546
         children [
           DEF WHEEL Transform {
             rotation 0 0 1 1.5707996938995747
@@ -371,8 +401,8 @@ Robot {
   controller ""
 }
 Viewpoint {
-  orientation 0.2911682146813767 0.8948485048496391 0.33833005206103867 4.926689998038938
-  position -1.548640475368361 1.0535305343643726 0.4396302781204986
+  orientation 0.010423416614763698 -0.9661547850775458 -0.2577523688694955 3.14162740537985
+  position 0.19426912575923683 0.7212787361873199 -1.1242858163841385
 }
 RectangleArena {
   floorAppearance Appearance {
