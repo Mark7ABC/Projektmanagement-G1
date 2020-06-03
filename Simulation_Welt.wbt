@@ -2,12 +2,29 @@
 WorldInfo {
 }
 Robot {
-  translation 0.2 0.06 0.2
-  rotation 0.0008188775073231738 0.9999994005189289 0.0007269122443600366 -2.4709203061004255
+  translation 0.2 0.0595916 0.2
+  rotation 0 1 0 -2.3487896938995747
   children [
+    Camera {
+      translation 0 -0.04 0
+      rotation 1 0 0 -1.5707996938995747
+      scale 0.1 0.1 0.1
+      name "floor_camera"
+      width 1
+      height 1
+    }
+    PointLight {
+      attenuation 0 0 1
+      location 0 0.3 0
+    }
     DistanceSensor {
       translation 0 -0.03 0.05
       rotation 0 1 0 -1.5708003061004252
+      lookupTable [
+        0 0 0
+        0.2 1000 0
+      ]
+      gaussianWidth 2
     }
     DEF tLED Transform {
       translation 0 -0.03 0.05
@@ -28,6 +45,7 @@ Robot {
             }
           ]
           name "stateled"
+          color []
           gradual TRUE
         }
       ]
@@ -134,7 +152,7 @@ Robot {
     }
     HingeJoint {
       jointParameters HingeJointParameters {
-        position 13.805521809375815
+        position 28.555849030474334
         anchor -0.05 -0.04 0
       }
       device [
@@ -143,8 +161,8 @@ Robot {
         }
       ]
       endPoint Solid {
-        translation -0.05999871748116081 -0.03999078940089961 9.192342683761226e-06
-        rotation 0.9999999999999939 -2.747295907427646e-08 -1.0673372612052652e-07 1.2391510385797218
+        translation -0.05999871748116081 -0.04001281809034496 2.2429578043810503e-06
+        rotation 0.999999999999998 4.6538820200857015e-08 -4.171101426378803e-08 3.423107650506266
         children [
           DEF WHEEL Transform {
             rotation 0 0 1 1.5707996938995747
@@ -169,7 +187,7 @@ Robot {
     }
     HingeJoint {
       jointParameters HingeJointParameters {
-        position 8.205590030515769
+        position 16.716107244222684
         anchor 0.05 -0.04 0
       }
       device [
@@ -179,8 +197,8 @@ Robot {
         }
       ]
       endPoint Solid {
-        translation 0.06000128159021598 -0.03999967579633158 1.1457914529555335e-05
-        rotation -0.9999999999999958 7.491560280225098e-08 -5.2498851638232015e-08 4.360780731855645
+        translation 0.06000128159021598 -0.04000927383303133 -6.7368341446278985e-06
+        rotation 0.9999999999999963 -7.507035050209038e-08 -4.1247439173153065e-08 4.149736481851264
         children [
           DEF WHEEL Transform {
             rotation 0 0 1 1.5707996938995747
@@ -212,17 +230,79 @@ Robot {
   }
   controller "raspi"
 }
+Viewpoint {
+  orientation -0.21837548433849704 -0.9228134428346874 -0.3173759561837004 2.010139016572825
+  position -1.4879597424038324 1.3161496149243896 -0.8013921437621927
+}
+RectangleArena {
+  floorAppearance Appearance {
+    texture ImageTexture {
+      url [
+        "C:/Temp/Spielfeld_01.png"
+      ]
+      repeatS FALSE
+      repeatT FALSE
+    }
+    textureTransform TextureTransform {
+      scale 0.5 0.5
+    }
+  }
+  wallAppearance MattePaint {
+  }
+}
 Robot {
-  translation -0.19999995081467623 0.059567161045032485 0.20000004797166018
-  rotation -0.001631152029687597 0.999998418034629 0.0007094161653735829 0.8014664186598651
+  translation -0.2 0.0595916 -0.2
+  rotation 0 1 0 0.7853996938995746
   children [
+    Camera {
+      translation 0 -0.04 0
+      rotation 1 0 0 -1.5707996938995747
+      scale 0.1 0.1 0.1
+      name "floor_camera"
+      width 1
+      height 1
+    }
+    PointLight {
+      attenuation 0 0 1
+      location 0 0.3 0
+    }
+    DistanceSensor {
+      translation 0 -0.03 0.05
+      rotation 0 1 0 -1.5708003061004252
+      lookupTable [
+        0 0 0
+        0.2 1000 0
+      ]
+      gaussianWidth 2
+    }
+    DEF tLED Transform {
+      translation 0 -0.03 0.05
+      children [
+        LED {
+          scale 0.1 0.1 0.1
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.8 0.8 0.8
+                roughness 0.2
+                metalness 0.5
+                emissiveIntensity 100
+              }
+              geometry Box {
+                size 0.1 0.1 0.1
+              }
+            }
+          ]
+          name "stateled"
+          color []
+          gradual TRUE
+        }
+      ]
+    }
     DEF CAM HingeJoint {
       endPoint Solid {
         rotation 0 1 0 3.141592653589793
         children [
-          DEF LED LED {
-            name "LED"
-          }
           Transform {
             translation 0 0.01 0
             rotation 1 0 0 -1.5707996938995747
@@ -265,7 +345,7 @@ Robot {
           translation 0 0.07 0
           children [
             Shape {
-              appearance MattePaint {
+              appearance GlossyPaint {
                 baseColor 1 0 0.498039
               }
               geometry Cylinder {
@@ -321,7 +401,7 @@ Robot {
     }
     HingeJoint {
       jointParameters HingeJointParameters {
-        position 0.2411202770769236
+        position 28.555849030474334
         anchor -0.05 -0.04 0
       }
       device [
@@ -330,8 +410,8 @@ Robot {
         }
       ]
       endPoint Solid {
-        translation -0.05999871748116081 -0.039987282945517316 -2.7587723879391275e-06
-        rotation 0.9999999999998584 -3.630939169653707e-07 -3.8901758098588217e-07 0.24112012064003313
+        translation -0.05999871748116081 -0.04001281809034496 2.2429578043810503e-06
+        rotation 0.999999999999998 4.6538820200857015e-08 -4.171101426378803e-08 3.423107650506266
         children [
           DEF WHEEL Transform {
             rotation 0 0 1 1.5707996938995747
@@ -357,7 +437,7 @@ Robot {
     }
     HingeJoint {
       jointParameters HingeJointParameters {
-        position 0.12901526369244617
+        position 16.716107244222684
         anchor 0.05 -0.04 0
       }
       device [
@@ -367,8 +447,8 @@ Robot {
         }
       ]
       endPoint Solid {
-        translation 0.06000128159021598 -0.03998889634308481 -2.845648694922098e-06
-        rotation 0.999999999999296 -7.453284575873237e-08 1.18419328486156e-06 0.12901511274907546
+        translation 0.06000128159021598 -0.04000927383303133 -6.7368341446278985e-06
+        rotation 0.9999999999999963 -7.507035050209038e-08 -4.1247439173153065e-08 4.149736481851264
         children [
           DEF WHEEL Transform {
             rotation 0 0 1 1.5707996938995747
@@ -392,33 +472,13 @@ Robot {
       }
     }
   ]
-  name "Raspi(1)"
+  name "Raspi(2)"
   boundingObject USE BODY
   physics Physics {
     density -1
     mass 1
   }
   controller ""
-}
-Viewpoint {
-  orientation 0.010423416614763698 -0.9661547850775458 -0.2577523688694955 3.14162740537985
-  position 0.19426912575923683 0.7212787361873199 -1.1242858163841385
-}
-RectangleArena {
-  floorAppearance Appearance {
-    texture ImageTexture {
-      url [
-        "C:/Temp/Spielfeld_01.png"
-      ]
-      repeatS FALSE
-      repeatT FALSE
-    }
-    textureTransform TextureTransform {
-      scale 0.5 0.5
-    }
-  }
-  wallAppearance MattePaint {
-  }
 }
 TexturedBackground {
 }
