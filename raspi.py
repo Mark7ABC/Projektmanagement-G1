@@ -19,9 +19,10 @@ class MainController:
     leftMotor = robot.getMotor('left wheel motor')
     rightMotor = robot.getMotor('right wheel motor')
     OpMode = 0
-    TrackingColor = (72,19,56)
+    TrackingColor = (219,60,142)
     led = robot.getLED('stateled')
     dsensor = robot.getDistanceSensor('distance sensor')
+    floorcam = robot.getCamera('floor_camera')
     
     def __init__(self):
         self.cm.enable(TIME_STEP)
@@ -30,6 +31,7 @@ class MainController:
         self.leftMotor.setVelocity(0.0)
         self.rightMotor.setVelocity(0.0)
         self.dsensor.enable(TIME_STEP)
+        self.floorcam.enable(TIME_STEP)
         
         if self.OpMode == 1:
             self.led.set(0x0000FF)
@@ -62,15 +64,34 @@ class MainController:
         robot.step(1000)
     
     def getFloorSensor(self):
-        val = 0
-        return val
+        #1=schwarz;2=grau;3=besch&weiß
+        threshold = 10
+        schwarz1 = (52,52,52)
+        grau2 = (180,180,180)
+        
+        red = self.floorcam.getImageArray()[0][0][0]
+        green = self.floorcam.getImageArray()[0][0][1]
+        blue = self.floorcam.getImageArray()[0][0][2]
+        
+        color = (red,green,blue)
+        
+        d = distance.euclidean(color, schwarz1)
+        if (d < threshold):
+            return 1
+            
+        d = distance.euclidean(color, grau2)
+        if (d < threshold):
+            return 2
+             
+        return 3
+            
         
         
 class EscapeMode:
     def loopFunction(self,controller):
         print('nothinghappens')
     def StartupFunction(self,controller):
-        controller.SetLEDColor(0x00FF00)
+        controller.SetLEDColor(0x0000ff)
         #10sek warten bis Rundenbeginn
         for i in range(1,10):
             controller.Wait1Second()
@@ -79,7 +100,7 @@ class EscapeMode:
 class PursuerMode:
     def find_robot(self, tColor):
         #Konstanten
-        threshold = 10
+        threshold = 80
         find_count = 3
 
         image = controller.getImageArray()
@@ -103,12 +124,14 @@ class PursuerMode:
                         return x
     
     def StartupFunction(self, controller):
-        controller.SetLEDColor(0x00FF00)
+        controller.SetLEDColor(0x00ff00)
         #10sek warten bis Rundenbeginn
         for i in range(1,11):
             controller.Wait1Second()
             print(str(10-i) + ' Sekunden bis zum Start')
         
+        controller.SetLEDColor(1)
+        controller.SetLEDColor(0xff0000)
         #3sek warten weil Fängermodus
         for i in range(1,4):
             controller.Wait1Second()
@@ -120,7 +143,7 @@ class PursuerMode:
         
         #left = 1;right = 0
         left_or_right = 1
-        if controller.getUSonicSensor() > 300.0:
+        if controller.getUSonicSensor() > 200.0:
             if x is None:
                 #SearchModus --> Marker ist nicht auf Kamera Bild
                 left_vel = -0.4
@@ -165,7 +188,7 @@ start_function_run = 0
 
 # Main loop:
 while robot.step(TIME_STEP) != -1:
-
+    
     if (controller.OpMode == 0):        
         if start_function_run == 0:
             start_function_run = 1
