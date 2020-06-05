@@ -1,0 +1,54 @@
+<html>
+<head>
+<script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+<script>
+	$(document).ready(function(){
+		var canvas = $("#myCanvas").get(0);
+		var context = canvas.getContext("2d");
+		var image = new Image();
+		image.src = "{{url_for('static', filename='image.jpg')}}";
+
+		$(image).load(function(){
+			context.drawImage(image, 0, 0);
+		});
+
+		$(canvas).click(function(e){
+			var canvasGap = $(canvas).offset();
+			var actualX = Math.floor(e.pageX - canvasGap.left);
+			var actualY = Math.floor(e.pageY - canvasGap.top);
+			
+			var pixelData = context.getImageData(actualX, actualY, 1, 1);
+			var data = pixelData.data;
+			var pixelColor = data[0] + ", " + data[1] + ", " + data[2];
+			console.log(pixelColor);
+			
+			$(function(){
+				$.ajax({
+					url: '/',
+					data: JSON.stringify({'pixelColor': pixelColor}),
+					type: 'POST',
+					contentType: 'application/json; charset=utf-8',
+					dataType: 'json',
+					}).done(function(data) {
+						console.log(pixelColor);
+					}).fail(function(error){
+						console.log(error);
+				});
+			});
+		});
+	});
+</script>
+</head>
+<body>
+<canvas id="myCanvas" width="640" height="640">Browser does not support canvas</canvas>
+<form method="POST" action="/">
+	<input type="submit" name="refresh" value="Refresh">
+</form>
+<form method="POST" action="/">
+<input type="submit" name="fangmodus" value="Fangmodus">
+</form>
+<form method="POST" action="/">
+<input type="submit" name="fluchtmodus" value="Fluchtmodus">
+</form>
+</body>
+</html>
