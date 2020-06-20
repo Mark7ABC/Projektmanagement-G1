@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.hero-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("{{url_for('static', filename='background.jpg')}}");
+  height: 35%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  transform: skewY(3deg);
+  margin-top: -50px;
+  overflow: hidden;
+}
+
+.hero-text {
+  text-align: left;
+  position: absolute;
+  top: 50%;
+  left: 35%;
+  transform: translate(-50%, -50%);
+  transform: skewY(-3deg);
+  color: white;
+}
+
+input {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 10px 25px;
+  color: black;
+  background-color: #ddd;
+  text-align: center;
+  cursor: pointer;
+  width: 200px;
+  margin: 5px;
+}
+
+input:hover {
+  background-color: #555;
+  color: white;
+}
+
+.contenttbl {
+  margin-top: 50px;
+  text-align: center;
+  position: absolute;
+  top: 57%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+}
+
+.headline {
+	font-weight: bold;
+	font-size: xx-large;
+	font-family: Segoe UI;
+	margin: 10px;
+}
+
+.colorview {
+	height: 35px;
+	width: 200px;
+	margin: 5px;
+}
+
+.console {
+	border-top: solid black 1px;
+	background-color: black;
+	color: white;
+	width: 650px;
+	height: 250px;
+	margin-top: -4px;
+	font-family: Consolas;
+}
+
+</style>
+</head>
+<body>
+
+<div class="hero-image">
+  <div class="hero-text">
+	<table>
+		<tr>
+			<td><div style="font-size: xxx-large; font-weight: bold;">Roboter Fangsti</div><td>
+		</tr>
+		<tr>
+			<td>Configuration and calibration website for the Alphabot based on a Raspberry PI3.</td>
+		</tr>
+	</table>
+  </div>
+</div>
+
+<table class="contenttbl">
+	<tr>
+		<td>
+			<table>
+				<tr>
+					<td><div class="headline">SETTINGS</div></td>
+				<tr>
+				<tr>
+					<td>Color:</td>
+					<td><div style="background-color: rgb( {{ rgbColor }} );" class="colorview"></div></td>
+					<td><form method="POST" action="/"><input type="submit" name="pick color" value="Pick Color"></form></td>
+				</tr>
+				<tr>
+					<td>Mode:</td>
+					<td><form method="POST" action="/"><input type="submit" name="escape-mode" value="Escape-Mode"></form></td>
+					<td><form method="POST" action="/"><input type="submit" name="pursure-mode" value="Pursure-Mode"></form></td>
+				</tr>
+				<tr>
+					<td><div class="headline">ACTION</div></td>
+				</tr>
+				<tr>
+					<td>Action:</td>
+					<td><form method="POST" action="/"><input type="submit" name="start" value="Start"></form></td>
+					<td><form method="POST" action="/"><input type="submit" name="stop" value="Stop"></form></td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<div style="border: solid black 1px; margin-top: 15px;">
+				<table>
+					<tr>
+						<table>
+							<tr>
+								<td><img src="{{url_for('static', filename='cmd.jpg')}}" style="width: 15px; height: 15px;"/></td>
+								<td>C:\ALPHABOT\system\cmd.exe</td>
+							</tr>
+						</table>
+					</tr>
+					<tr>
+						<td>
+							<div class="console">
+								<table>
+									<tr>
+										<td>ALPAHBOT> {{ mode }} </td>
+									</tr>
+								</table>
+							</div>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</td>
+	</tr>
+</table>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
